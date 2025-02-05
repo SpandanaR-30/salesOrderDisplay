@@ -1,14 +1,32 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], (Controller) => {
+    "sap/ui/core/mvc/Controller",
+	"sap/ui/core/Fragment"
+], (Controller,Fragment) => {
     "use strict";
 
     return Controller.extend("app.splitappb12.controller.detailView", {
-        onInit:function(){
+        // onInit:function(){
+		//	var oModel=new sap.ui.model.json.JSONModel();
+		// 	oModel.loadData("/model/mockData/supplier.json");
+		// 	this.getView().setModel(oModel);
+		// },
+
+        onInit(){
 			var oModel=new sap.ui.model.json.JSONModel();
-			oModel.loadData("models/mockData/supplier.json");
-			this.getView().setModel(oModel);
+		 	oModel.loadData("/model/mockData/supplier.json");
+		 	this.getView().setModel(oModel);
+
+			let oRouter=this.getOwnerComponent().getRouter();
+			oRouter.attachRoutePatternMatched(this._onRouteMatched,this)
+
 		},
+		_onRouteMatched:function(oEvent){
+			let sIndex=oEvent.getParameter("arguments").ind
+			let sPath="toolModel>/toolsData/"+sIndex
+			let oDetailView=this.getView();
+			oDetailView.bindElement(sPath)
+		},
+
 		onConfirm:function(oEvent){
        	var oItem=oEvent.getParameter("selectedItem");
        	  var sItem=  oItem.mProperties.title;
@@ -29,7 +47,7 @@ sap.ui.define([
 			// var that=this;
 			if(!this.dialog){
 				this.dialog=Fragment.load({
-					name:"capgemini_ui5training.batch12.fragments.popUp",
+					name:"app.splitappb12.fragments.popUp",
 					controller:this
 					
 				}).then(function(oDialog){
@@ -42,11 +60,11 @@ sap.ui.define([
 			}else{
 				this.dialog.open();
 			}
-		},
-		
-	onPressToView1:function(){
-			var oApp=this.getView().getParent();
-			oApp.to("idList");
 		}
+		
+	// onPressToView1:function(){
+	// 		var oApp=this.getView().getParent();
+	// 		oApp.to("idList");
+		//}
     });
 });

@@ -1,0 +1,44 @@
+{
+	"supplierTab": [{
+		"id": 201,
+		"name": "Precision Tools Inc.",
+		"contact_person": "John Doe",
+		"email": "john.doe@precisiontools.com",
+		"phone": "+1-555-1234",
+		"address": "123 Industrial St, New York, NY, USA",
+		"tools_supplied": [101, 104, 105, 110]
+	}, {
+		"id": 202,
+		"name": "Craftsmen Supplies Ltd.",
+		"contact_person": "Alice Johnson",
+		"email": "alice.johnson@craftsmensupplies.com",
+		"phone": "+1-555-5678",
+		"address": "456 Carpenter Ave, Los Angeles, CA, USA",
+		"tools_supplied": [102, 103, 107, 109]
+	}, {
+		"id": 203,
+		"name": "MetalWorks Solutions",
+		"contact_person": "Robert Smith",
+		"email": "robert.smith@metalworks.com",
+		"phone": "+1-555-9876",
+		"address": "789 Steel Road, Chicago, IL, USA",
+		"tools_supplied": [106, 108]
+	}, {
+		"id": 204,
+		"name": "PowerTool Distributors",
+		"contact_person": "Emily White",
+		"email": "emily.white@powertooldist.com",
+		"phone": "+1-555-4321",
+		"address": "321 Machinery Ln, Houston, TX, USA",
+		"tools_supplied": [103, 104, 105, 108, 109]
+	}, {
+		"id": 205,
+		"name": "Pro Builders Supply",
+		"contact_person": "Michael Brown",
+		"email": "michael.brown@probuilders.com",
+		"phone": "+1-555-2468",
+		"address": "555 Construction Blvd, Miami, FL, USA",
+		"tools_supplied": [101, 102, 106, 107, 110]
+	}]
+
+}

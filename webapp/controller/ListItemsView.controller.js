@@ -1,6 +1,9 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], (Controller) => {
+    "sap/ui/core/mvc/Controller",
+	"app/splitappb12/model/models",
+	"sap/ui/model/FilterOperator",
+	"sap/ui/model/Filter"
+], (Controller,models,Filter,FilterOperator) => {
     "use strict";
 
     return Controller.extend("app.splitappb12.controller.ListItemsView", {
